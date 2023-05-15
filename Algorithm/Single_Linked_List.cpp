@@ -1,8 +1,8 @@
 #include <iostream>
 
-// DFS, BFS º¹½ÀÇÏ±â
-// Spanning Tree ¾Ë°í¸®Áò Â¥±â
-// Recursion or StackÀ¸·Î Â¥±â
+// DFS, BFS ë³µìŠµí•˜ê¸°
+// Spanning Tree ì•Œê³ ë¦¬ì¦˜ ì§œê¸°
+// Recursion or Stackìœ¼ë¡œ ì§œê¸°
 
 // namespace
 using namespace std;
