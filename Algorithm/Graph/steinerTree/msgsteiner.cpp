@@ -98,6 +98,7 @@ int main(int ac, char** av)
 	<- "범위 지정 연산자"
 	*/
 	cout.setf(ios_base::fixed, ios_base::floatfield); // ios_base :: fixed, floatfield
+	
 	po::variables_map vm = parse_command_line(ac, av); // 
 
 	MsgSteinerGraph M(vm["depth"].as<int>());
