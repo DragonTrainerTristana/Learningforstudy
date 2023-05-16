@@ -1,0 +1,26 @@
+This is the distribution package of MSGSTEINER 1.3
+
+The permission to use this software is granted by the authors, Alfredo
+Braunstein and Riccardo Zecchina, only on the following 5 conditions:
+
+1. The MSGSTEINER software suite remains at your institution and is not
+published, distributed, or otherwise transferred or made available to
+people other than institution employees and students involved in
+research under your supervision.
+2. The MSGSTEINER software suite will be used by you and/or your
+institution solely for non-commercial purposes, except with express
+permission from the authors.
+3. You may provide the authors with feedback on the use of the MSGSTEINER
+software suite in your research, and that the authors are permitted to
+use any information you provide in making changes to the MSGSTEINER
+software suite.
+4. Any risk associated with using the MSGSTEINER software suite at your
+institution is with you and your institution.
+5. The MSGSTEINER software suite will be cited in any publication(s)
+reporting on data obtained by using it, as:
+
+M. Bailly-Bechet, C. Borgs, A. Braunstein, J. Chayes, A. Dagkessamanskaia,
+J.-M. François, and R. Zecchina. Finding undetected protein associations in
+cell signaling by belief propagation. PNAS published ahead of print December 27,
+2010, doi:10.1073/pnas.1004751108
+

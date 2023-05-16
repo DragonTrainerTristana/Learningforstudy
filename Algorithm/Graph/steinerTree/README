@@ -1,0 +1,50 @@
+################ DISCLAIMER
+
+This code comes "as is", without any warranty of any kind. If it breaks, you can keep both pieces.
+
+
+################ COMPILATION
+
+The code has been successfully compiled under Linux (Ubuntu oneiric and precise) and MacOSX; compilation details and parameters may vary. You may need to adjust and/or add -L parameters in the Makefile to point to your library directories and -I to point to your include directories.
+
+- You will need boost libraries to compile the standalone program, including the binary boost-program-options. People reported the one coming with 'fink' in OSX to to work just fine. You don't need boost-program-options for the matlab frontend (although you still need the header-only part of the boost library).
+
+################ USAGE
+
+You typically need to specify -d and -g. 
+
+./msgsteiner -d10 -g1e-3 < file.stp
+
+Use --help to get more info on parameters.
+
+./msgsteiner --help
+
+
+################ INPUT FILE
+
+The file format is as follows
+
+#undirected edges
+E v1 v2 w12 
+#directed edges 
+D v1 v2 w12
+#node prizes:
+W v1 p1
+#terminals (implemented as a very large prize, check value in the code)
+T v1
+#root (if no root specified, a rooting procedure is used)
+R v1 
+
+
+################# MATLAB
+
+The matlab fronted is not compiled by default. In order to compile the matlab frontend:
+
+- You need a working mex setup for your compiler.
+
+- Edit the first line of Makefile to point to your MATLAB dir
+
+- issue 'make matlab'
+
+- with the matlab directory in your matlab path, call the MsgSteiner function for usage instructions (or read matlab.cpp)
+
