@@ -27,9 +27,15 @@ int main() {
 	int numNode;// number of Node
 	int connectedNum; // random number of Connected Link between Nodes;
 	int connectedNode;
-	float randomfloat[4] = { };
+
+
+	float randomFloat[4] = { };
+	int randomInt[2] = {};
 
 	cin >> numNode;
+
+	
+	int *filledArray = new int[numNode];
 
 	Node* Vertices = new Node[numNode]; // memory
 	// Allocation of Link between Nodes at each Node
@@ -48,7 +54,7 @@ int main() {
 		connectedNum = ( rand() & 2 ); // 0 ~ 2 random number for generating new links
 		
 			
-		randomfloat[0] = (double)rand()/RAND_MAX;
+		randomFloat[0] = (double)rand()/RAND_MAX;
 		
 
 		// We have to connect links between nodes carefully.
@@ -64,8 +70,8 @@ int main() {
 			(Vertices + i + 1)->link[0] = (Vertices + i);
 
 			// Weight
-			(Vertices + i)->weight[0] = randomfloat[0];
-			(Vertices + i + 1)->weight[0] = randomfloat[0];
+			(Vertices + i)->weight[0] = randomFloat[0];
+			(Vertices + i + 1)->weight[0] = randomFloat[0];
 
 		}
 		else if (i == numNode - 1) {
@@ -75,8 +81,8 @@ int main() {
 			(Vertices + 0)->link[1] = (Vertices + i);
 
 			//Weight
-			(Vertices + i)->weight[1] = randomfloat[0];
-			(Vertices + 0)->weight[1] = randomfloat[0];
+			(Vertices + i)->weight[1] = randomFloat[0];
+			(Vertices + 0)->weight[1] = randomFloat[0];
 		}
 		else {
 			
@@ -85,22 +91,36 @@ int main() {
 			(Vertices + i + 1)->link[0] = (Vertices + i);
 
 			//Weight
-			(Vertices + i)->weight[1] = randomfloat[0];
-			(Vertices + i + 1)->weight[0] = randomfloat[0];
+			(Vertices + i)->weight[1] = randomFloat[0];
+			(Vertices + i + 1)->weight[0] = randomFloat[0];
 		}
 
-		// Link 2 ~ 3 
+		// Link 2 ~ 3	
 
-		// ¿©±â¿¡¼­ ÀÚ±âÀÚ½Å Á¦¿Ü, Áßº¹ Á¦¿ÜÇÑ ¸µÅ©¸¦ ¿¬°áÇØÁà¾ßÇÔ
+		// ì—¬ê¸°ì—ì„œ ìžê¸°ìžì‹  ì œì™¸, ì¤‘ë³µ ì œì™¸í•œ ë§í¬ë¥¼ ì—°ê²°í•´ì¤˜ì•¼í•¨
 
 		if ((Vertices + i)->possibleNum > 0) {
+
+			for (;;) {
+				if ((Vertices + i)->possibleNum == 0)break;
+				else {
+					randomInt[0] = (int)rand() % numNode;
+					if ((Vertices + i)->possibleNum != 0) {
+					
+					}
+					
+				}
+			}
+
 		
 			if ((Vertices + i)->possibleNum == 1 && connectedNum >= 1) {
 				
+				
+
 			}
 			else if((Vertices + i)->possibleNum == 2 && connectedNum >= 2){
 				for (int j = 0; j < connectedNum; j++) {
-				
+					
 				}
 			}
 			else {} // nothing
